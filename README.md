@@ -12,11 +12,13 @@ While the whole Single-Page App thing is new and trendy, ngUrlBind is inspired b
 
 ngUrlBind is useful during development where you want to be able to hit refresh on your browser (or use livereload) without having AngularJS lose its scope state, or at least certain parts of it.
 
-Subject to the limitation noted below, it is also useful in production, if you want your users to persist and exchange certain aspects of Angular's state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.
+Subject to the limitations noted below, it is also useful in production, if you want your users to persist and exchange certain aspects of Angular's state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.
 
 We have made this as it's useful to us in both of these cases and are making it available to anyone else who may find it useful.
 
 A major limitation is that ngUrlBind doesn't play well with AngularJS routing. We're fairly confident this can be remedied, but haven't had the need for now.
+
+Another limitation is that the first user action creates a hash, which adds a step to the user's history. By strict HATEOAS this is correct, but this should probably be improved for the sake of UX and practicality.
 
 ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
 
