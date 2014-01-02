@@ -14,7 +14,7 @@ We have made this as it's useful to us in both of these cases and are making it 
 
 ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
 
-I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observer() we trust.
+I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observe() we trust.
 
 ## How does it work?
 
