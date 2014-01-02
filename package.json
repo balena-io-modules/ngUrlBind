@@ -15,6 +15,8 @@
     "gulp": "~3.2.2",
     "gulp-coffee": "~1.2.4",
     "gulp-wrap-umd": "~0.1.0",
-    "gulp-replace": "~0.2.0"
+    "gulp-replace": "~0.2.0",
+    "gulp-markdown": "~0.1.0",
+    "gulp-rename": "~0.2.1"
   }
 }
