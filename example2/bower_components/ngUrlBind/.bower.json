@@ -1,0 +1,32 @@
+{
+  "name": "ngUrlBind",
+  "version": "0.0.2",
+  "homepage": "https://github.com/resin-io/ngUrlBind",
+  "authors": [
+    "AlexandrosM <alexandros@resin.io>"
+  ],
+  "description": "Easily bind AngularJS scope properties to your URL hash.",
+  "main": "dist/ngUrlBind.js",
+  "keywords": [
+    "angularJS",
+    "url",
+    "binding"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "043f4a7918fb8413f0cdff693832f5582fedc953"
+  },
+  "_source": "git://github.com/resin-io/ngUrlBind.git",
+  "_target": "~0.0.1",
+  "_originalSource": "ngUrlBind"
+}

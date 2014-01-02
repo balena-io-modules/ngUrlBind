@@ -1,0 +1,27 @@
+{
+  "name": "jsurl",
+  "main": "index.js",
+  "homepage": "https://github.com/Sage/jsurl",
+  "authors": [
+    "Bruno Jouhier"
+  ],
+  "description": "URL friendly JSON-like formatting and parsing",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "77ead95a00",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "77ead95a00fffee7edc5ca5a124acc6527009e08"
+  },
+  "_source": "https://github.com/Sage/jsurl.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Sage/jsurl.git",
+  "_direct": true
+}
