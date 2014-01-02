@@ -12,6 +12,8 @@ It is also useful in production, if you want your users to persist and exchange 
 
 We have made this as it's useful to us in both of these cases and are making it available to anyone else who may find it useful.
 
+A major limitation is that ngUrlBind doesn't play well with AngularJS routing. We're fairly confident this can be remedied, but haven't had the need for now.
+
 ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
 
 I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observe() we trust.
