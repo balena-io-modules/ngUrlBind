@@ -1,0 +1,20 @@
+{
+  "name": "urlBind",
+  "version": "0.0.1",
+  "description": "Bind AngularJS scope properties to the URL",
+  "main": "dest/urlBind.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "~3.2.2",
+    "gulp-coffee": "~1.2.4",
+    "gulp-wrap-umd": "~0.1.0",
+    "gulp-replace": "~0.2.0"
+  }
+}

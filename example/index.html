@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="urlBindExample">
+	<head>
+		<script src="bower_components/jsurl/lib/jsurl.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="../dist/urlBind.js"></script>
+		<script>
+			angular.module('urlBindExample', ['urlBind'])
+				.controller('mainCtrl', function($scope, urlBind){
+					$scope.user = {}
+					urlBind($scope, 'user')
+				})
+		</script>
+	</head>
+
+	<body ng-controller="mainCtrl">
+		<input type="text" ng-model="user.firstName"/>
+		<input type="text" ng-model="user.lastName"/>
+		{{user.firstName}} {{user.lastName}}
+	</body>
+</html>
