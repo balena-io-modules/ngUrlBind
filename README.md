@@ -16,14 +16,6 @@ Subject to the limitations noted below, it is also useful in production, if you 
 
 We have made this as it's useful to us in both of these cases and are making it available to anyone else who may find it useful.
 
-A major limitation is that ngUrlBind doesn't play well with AngularJS routing. We're fairly confident this can be remedied, but haven't had the need for now.
-
-Another limitation is that the first user action creates a hash, which adds a step to the user's history. By strict HATEOAS this is correct, but this should probably be improved for the sake of UX and practicality.
-
-ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
-
-I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observe() we trust.
-
 ## How does it work?
 
 ngUrlBind's principle of operation is simple. Selected model properties are reflected to the URL hash as the AngularJS application is being used. They are then seeded back to the model when the page is loaded with the appropriate hash. We use the very elegant [jsurl](https://github.com/Sage/jsurl) to serialise JSON data to the URL as it becomes both more readable and shorter than using Base64.
@@ -49,6 +41,16 @@ angular.module('ngUrlBindExample', ['ngUrlBind'])
 ```
 
 This will bind the state of the user property to the URL hash. Refreshing the page will restore the state of the user object through the URL hash.
+
+## Known Limitations
+
+A major limitation is that ngUrlBind doesn't play well with AngularJS routing. We're fairly confident this can be remedied, but haven't had the need for now.
+
+Another limitation is that the first user action creates a hash, which adds a step to the user's history. By strict HATEOAS this is correct, but this should probably be improved for the sake of UX and practicality.
+
+ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
+
+I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observe() we trust.
 
 ## Installation
 
