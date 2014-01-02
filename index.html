@@ -9,10 +9,6 @@
 <p>ngUrlBind is useful during development where you want to be able to hit refresh on your browser (or use livereload) without having AngularJS lose its scope state, or at least certain parts of it.</p>
 <p>Subject to the limitations noted below, it is also useful in production, if you want your users to persist and exchange certain aspects of Angular&#39;s state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.</p>
 <p>We have made this as it&#39;s useful to us in both of these cases and are making it available to anyone else who may find it useful.</p>
-<p>A major limitation is that ngUrlBind doesn&#39;t play well with AngularJS routing. We&#39;re fairly confident this can be remedied, but haven&#39;t had the need for now.</p>
-<p>Another limitation is that the first user action creates a hash, which adds a step to the user&#39;s history. By strict HATEOAS this is correct, but this should probably be improved for the sake of UX and practicality.</p>
-<p>ngUrlBind is not for everything, and it&#39;s not for everywhere. But it&#39;s got its uses.</p>
-<p>I haven&#39;t done any performance testing, but I wouldn&#39;t be surprised if it wasn&#39;t fantastic at this point. In object.Observe() we trust.</p>
 <h2 id="how-does-it-work-">How does it work?</h2>
 <p>ngUrlBind&#39;s principle of operation is simple. Selected model properties are reflected to the URL hash as the AngularJS application is being used. They are then seeded back to the model when the page is loaded with the appropriate hash. We use the very elegant <a href="https://github.com/Sage/jsurl">jsurl</a> to serialise JSON data to the URL as it becomes both more readable and shorter than using Base64.</p>
 <h2 id="binding-a-property">Binding a property</h2>
@@ -27,6 +23,11 @@
         ngUrlBind($scope, &#39;user&#39;)
     })
 </code></pre><p>This will bind the state of the user property to the URL hash. Refreshing the page will restore the state of the user object through the URL hash.</p>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>A major limitation is that ngUrlBind doesn&#39;t play well with AngularJS routing. We&#39;re fairly confident this can be remedied, but haven&#39;t had the need for now.</p>
+<p>Another limitation is that the first user action creates a hash, which adds a step to the user&#39;s history. By strict HATEOAS this is correct, but this should probably be improved for the sake of UX and practicality.</p>
+<p>ngUrlBind is not for everything, and it&#39;s not for everywhere. But it&#39;s got its uses.</p>
+<p>I haven&#39;t done any performance testing, but I wouldn&#39;t be surprised if it wasn&#39;t fantastic at this point. In object.Observe() we trust.</p>
 <h2 id="installation">Installation</h2>
 <p><code>bower install ngUrlBind</code></p>
 <p>make sure ngUrlBind/dist/ngUrlBind.js is loaded before your angular module. ngUrlBind is wrapped in the Universal Module Definition so it supports AMD, CommonJS, and plain ol&#39; global declaration via script tag.</p>
