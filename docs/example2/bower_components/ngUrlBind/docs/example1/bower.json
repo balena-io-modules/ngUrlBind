@@ -1,5 +1,5 @@
 {
-  "name": "ngUrlBind example 1",
+  "name": "ngUrlBind example",
   "version": "0.0.1",
   "authors": [
     "AlexandrosM <alexandros@resin.io>"
@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "angular": "~1.2.6",
-    "jsurl": "https://github.com/Sage/jsurl.git",
-    "ngUrlBind": "~0.0.2"
+    "jsurl": "https://github.com/Sage/jsurl.git"
   }
 }

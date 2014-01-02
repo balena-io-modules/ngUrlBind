@@ -1,10 +1,13 @@
 {
   "name": "ngUrlBind",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Bind AngularJS scope properties to the URL",
   "main": "dest/ngUrlBind.js",
   "directories": {
     "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",

@@ -4,13 +4,11 @@ Easily bind AngularJS scope properties to your URL hash.
 
 AngularJS's two-way binding allows you to bind data from a model to the DOM and back. ngUrlBind allows you to additionally bind data from an AngularJS model to the URL hash and back. Does that make it *four-way binding*?
 
-While the whole Single-Page App thing is new and trendy, ngUrlBind is inspired by the "Hypermedia as the Engine of Application State" principle, one of the core components of [REST](http://en.wikipedia.org/wiki/Representational_state_transfer)'s Uniform Interface constraint.
-
 ## Why?
 
 ngUrlBind is useful during development where you want to be able to hit refresh on your browser (or use livereload) without having AngularJS lose its scope state, or at least certain parts of it.
 
-Subject to the limitation noted below, it is also useful in production, if you want your users to persist and exchange certain aspects of Angular's state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.
+It is also useful in production, if you want your users to persist and exchange certain aspects of Angular's state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.
 
 We have made this as it's useful to us in both of these cases and are making it available to anyone else who may find it useful.
 

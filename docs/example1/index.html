@@ -3,7 +3,7 @@
 	<head>
 		<script src="bower_components/jsurl/lib/jsurl.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
-		<script src="ngUrlBind.js"></script>
+		<script src="bower_components/ngUrlBind/dist/ngUrlBind.js"></script>
 		<script>
 			angular.module('ngUrlBindExample', ['ngUrlBind'])
 				.controller('mainCtrl', function($scope, ngUrlBind){
@@ -13,9 +13,19 @@
 		</script>
 	</head>
 
+
+
 	<body ng-controller="mainCtrl">
-		<input type="text" ng-model="user.firstName"/>
-		<input type="text" ng-model="user.lastName"/>
-		{{user.firstName}} {{user.lastName}}
+		<h1>Simple ngUrlBind example</h1>
+		<div>
+			<p>Edit the fields below and observe the URL.</p>
+			<p>Then, refresh the page or load the URL in another browser window to see the state retained.</p>
+			<p>View source to see how it works.</p>
+		</div>
+		<div>
+			<input type="text" ng-model="user.firstName"/>
+			<input type="text" ng-model="user.lastName"/>
+		</div>
+		Firstname: [{{user.firstName}}] Lastname: [{{user.lastName}}]
 	</body>
 </html>
