@@ -1,2 +1,4 @@
 .idea
 node_modules
+docs/example1/bower_components/ngUrlBind/docs
+docs/example2/bower_components/ngUrlBind/docs
