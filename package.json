@@ -1,8 +1,8 @@
 {
-  "name": "urlBind",
+  "name": "ngUrlBind",
   "version": "0.0.1",
   "description": "Bind AngularJS scope properties to the URL",
-  "main": "dest/urlBind.js",
+  "main": "dest/ngUrlBind.js",
   "directories": {
     "example": "example"
   },

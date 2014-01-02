@@ -1,40 +1,42 @@
-# urlBind
+# ngUrlBind
 
 Easily bind AngularJS scope properties to your URL hash.
 
-AngularJS's two-way binding allows you to bind data from a model to the DOM and back. urlBind allows you to additionally bind data from an AngularJS model to the URL hash and back. Does that make it *four-way binding*?
+AngularJS's two-way binding allows you to bind data from a model to the DOM and back. ngUrlBind allows you to additionally bind data from an AngularJS model to the URL hash and back. Does that make it *four-way binding*?
 
 ## Why?
 
-urlBind is useful during development where you want to be able to hit refresh on your browser (or use livereload) without having AngularJS lose its scope state, or at least certain parts of it.
+ngUrlBind is useful during development where you want to be able to hit refresh on your browser (or use livereload) without having AngularJS lose its scope state, or at least certain parts of it.
 
 It is also useful in production, if you want your users to persist and exchange certain aspects of Angular's state. For instance think about exchange of URLs over email of IM, or just simple bookmarking.
 
 We have made this as it's useful to us in both of these cases and are making it available to anyone else who may find it useful.
 
-urlBind is not for everything, and it's not for everywhere. But it's got its uses.
+ngUrlBind is not for everything, and it's not for everywhere. But it's got its uses.
 
 I haven't done any performance testing, but I wouldn't be surprised if it wasn't fantastic at this point. In object.Observer() we trust.
 
 ## How does it work?
 
-urlBind's principle of operation is simple. Selected model properties are reflected to the URL hash as the AngularJS application is being used. They are then seeded back to the model when the page is loaded with the appropriate hash. We use the very elegant [jsurl](https://github.com/Sage/jsurl) to serialise JSON data to the URL as it becomes both more readable and shorter than using Base64.
+ngUrlBind's principle of operation is simple. Selected model properties are reflected to the URL hash as the AngularJS application is being used. They are then seeded back to the model when the page is loaded with the appropriate hash. We use the very elegant [jsurl](https://github.com/Sage/jsurl) to serialise JSON data to the URL as it becomes both more readable and shorter than using Base64.
 
 ## Binding a property
 
-All you need is to inject the urlBind service into your controller and call
+All you need is to inject the ngUrlBind service into your controller and call
 
-`urlBind($scope, 'propertyName')`
+`ngUrlBind($scope, 'propertyName')`
 
 That's it. This will bind the user property of your current controller's scope to the URL hash.
+
+Important: For the moment, only first-level properties are supported. So no dots in the 'propertyName' argument. Feel free to investigate and remove this limitation, pull requestes welcome.
 
 Here's a more complete example:
 
 ```
-angular.module('urlBindExample', ['urlBind'])
-    .controller('mainCtrl', function($scope, urlBind){
+angular.module('ngUrlBindExample', ['ngUrlBind'])
+    .controller('mainCtrl', function($scope, ngUrlBind){
         $scope.user = {}
-        urlBind($scope, 'user')
+        ngUrlBind($scope, 'user')
     })
 ```
 
@@ -42,11 +44,11 @@ This will bind the state of the user property to the URL hash. Refreshing the pa
 
 ## Installation
 
-`bower install urlBind`
+`bower install ngUrlBind`
 
-make sure urlBind/dist/urlBind.js is loaded before your angular module. urlBind is wrapped in the Universal Module Definition so it supports AMD, CommonJS, and plain ol' global declaration via script tag.
+make sure ngUrlBind/dist/ngUrlBind.js is loaded before your angular module. ngUrlBind is wrapped in the Universal Module Definition so it supports AMD, CommonJS, and plain ol' global declaration via script tag.
 
-Make your angular module require the 'urlScope' module and inject the urlBind service into your controller. You're ready to go.
+Make your angular module require the 'urlScope' module and inject the ngUrlBind service into your controller. You're ready to go.
 
 ## Development
 

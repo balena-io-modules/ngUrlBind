@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="urlBindExample">
+<html ng-app="ngUrlBindExample">
 	<head>
 		<script src="bower_components/jsurl/lib/jsurl.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
-		<script src="../dist/urlBind.js"></script>
+		<script src="../dist/ngUrlBind.js"></script>
 		<script>
-			angular.module('urlBindExample', ['urlBind'])
-				.controller('mainCtrl', function($scope, urlBind){
+			angular.module('ngUrlBindExample', ['ngUrlBind'])
+				.controller('mainCtrl', function($scope, ngUrlBind){
 					$scope.user = {}
-					urlBind($scope, 'user')
+					ngUrlBind($scope, 'user')
 				})
 		</script>
 	</head>

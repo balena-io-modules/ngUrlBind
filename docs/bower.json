@@ -1,10 +1,10 @@
 {
-  "name": "urlBind example",
+  "name": "ngUrlBind example",
   "version": "0.0.1",
   "authors": [
     "AlexandrosM <alexandros@resin.io>"
   ],
-  "description": "an example project for urlBind",
+  "description": "an example project for ngUrlBind",
   "main": "index.html",
   "license": "MIT",
   "ignore": [

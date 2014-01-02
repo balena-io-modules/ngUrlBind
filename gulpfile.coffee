@@ -5,16 +5,16 @@ wrapUMD = require 'gulp-wrap-umd'
 replace = require 'gulp-replace'
 
 gulp.task 'build', ->
-	# huge hack alert: before writing urlBind.js,
+	# huge hack alert: before writing ngUrlBind.js,
 	# we have to replace 'root.jsurl' with 'root.JSURL'
 	# as jsurl publishes itself differently to global
 	# and differently to npm, which isn't anticiated
 	# by the UMD wrapper.
 
-	gulp.src('src/urlBind.coffee')
+	gulp.src('src/ngUrlBind.coffee')
 	.pipe(coffee(bare: true))
 	.pipe(wrapUMD(
-			namespace: 'urlBind'
+			namespace: 'ngUrlBind'
 			deps: ['angular','jsurl']
 	))
 	.pipe(replace(',root.jsurl);', ',root.JSURL);'))
@@ -26,6 +26,6 @@ gulp.task 'default', ->
 
 	# Watch files and run tasks if they change
 	gulp.watch [
-		'src/urlBind.coffee'
+		'src/ngUrlBind.coffee'
 	], (event) ->
 		gulp.run 'build'

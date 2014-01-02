@@ -1,5 +1,5 @@
-angular.module('urlBind', [])
-.factory 'urlBind', ($location) ->
+angular.module('ngUrlBind', [])
+.factory 'ngUrlBind', ($location) ->
 	(scope, property) ->
 		if $location.search()[property]
 			if typeof scope[property] == 'object'
