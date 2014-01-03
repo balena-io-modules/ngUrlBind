@@ -58,7 +58,7 @@ I haven't done any performance testing, but I wouldn't be surprised if it wasn't
 
 make sure ngUrlBind/dist/ngUrlBind.js is loaded before your angular module. ngUrlBind is wrapped in the Universal Module Definition so it supports AMD, CommonJS, and plain ol' global declaration via script tag.
 
-Make your angular module require the 'urlScope' module and inject the ngUrlBind service into your controller. You're ready to go.
+Make your angular module require the 'ngUrlBind' module and inject the ngUrlBind service into your controller. You're ready to go.
 
 ## Development
 
