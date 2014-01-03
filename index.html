@@ -2,6 +2,7 @@
 
 <h1 id="ngurlbind">ngUrlBind</h1>
 <p>Easily bind AngularJS scope properties to your URL hash.</p>
+<p>In simpler terms, if you have a property called <code>user</code> on your scope with a value of <code>{firstName: &#39;John&#39;, lastName: &#39;Doe&#39;}</code>, and you bind it to the URL, your URL hash will be something resembling <code>#?user=~(firstName~&#39;John~lastName~&#39;Doe)</code>. When the state of $scope.user changes, the URL hash will change with it. If the page is loaded or reloaded with a valid hash, the state from the hash will be transferred to the $scope.user property on load.</p>
 <p>See a <a href="http://resin-io.github.io/ngUrlBind/example1/">simple example</a> or an <a href="http://resin-io.github.io/ngUrlBind/example2/">advanced example</a>.</p>
 <p>AngularJS&#39;s two-way binding allows you to bind data from a model to the DOM and back. ngUrlBind allows you to additionally bind data from an AngularJS model to the URL hash and back. Does that make it <em>four-way binding</em>?</p>
 <p>While the whole Single-Page App thing is new and trendy, ngUrlBind is inspired by the &quot;Hypermedia as the Engine of Application State&quot; principle, one of the core components of <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>&#39;s Uniform Interface constraint.</p>
