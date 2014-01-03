@@ -2,6 +2,8 @@
 
 Easily bind AngularJS scope properties to your URL hash.
 
+In simpler terms, if you have a property called `user` on your scope with a value of `{firstName: 'John', lastName: 'Doe'}`, and you bind it to the URL, your URL hash will be something resembling `#?user=~(firstName~'John~lastName~'Doe)`. When the state of $scope.user changes, the URL hash will change with it. If the page is loaded or reloaded with a valid hash, the state from the hash will be transferred to the $scope.user property on load.
+
 See a [simple example](http://resin-io.github.io/ngUrlBind/example1/) or an [advanced example](http://resin-io.github.io/ngUrlBind/example2/).
 
 AngularJS's two-way binding allows you to bind data from a model to the DOM and back. ngUrlBind allows you to additionally bind data from an AngularJS model to the URL hash and back. Does that make it *four-way binding*?
