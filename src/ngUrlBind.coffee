@@ -1,5 +1,5 @@
 angular.module('ngUrlBind', [])
-.factory 'ngUrlBind', ($location) ->
+.factory 'ngUrlBind', ['$location', ($location) ->
 	(scope, property) ->
 		if $location.search()[property]
 			if typeof scope[property] == 'object'
@@ -24,3 +24,4 @@ angular.module('ngUrlBind', [])
 				oldValue = scope[property]
 				if newValue != oldValue
 					scope[property] = newValue
+	]
