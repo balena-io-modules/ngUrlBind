@@ -10,7 +10,7 @@
   }
 }(this, function() {
 
-return angular.module('ngUrlBind', []).factory('ngUrlBind', function($location) {
+return angular.module('ngUrlBind', []).factory('ngUrlBind', ['$location', function($location) {
   return function(scope, property) {
     if ($location.search()[property]) {
       if (typeof scope[property] === 'object') {
@@ -46,7 +46,7 @@ return angular.module('ngUrlBind', []).factory('ngUrlBind', function($location) 
       }
     });
   };
-});
+}]);
 ;
 
 }));
